@@ -7,7 +7,7 @@ class HomeController < ApplicationController
     def receive_data
         data = request.body.read
         if data.present?
-            JSON.parse(data)
+            data = JSON.parse(data)
             data['Countries'].each do |hash| CoronaDatum.find_by(country: hash['Country']).update(confirmed_cases: hash['TotalConfirmed']) end
             render :json => {:status => 200}   
         else
