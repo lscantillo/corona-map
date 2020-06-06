@@ -1,2 +1,39 @@
-<h1 style='text-align:center'> Coronavirus Covid 19 MAP </h1>
+<div class="container py-5">
+<h1 style='text-align:center;'> Coronavirus Covid 19 MAP </h1>
+
 <%= geo_chart(@data) %>
+<div class="container">
+ <h1>General Stats</h1>  
+  <div class="row">
+    <div class="col-sm">
+    <h2>Total Cases</h2>
+    <h2><%= @stats['data']['total_cases'] %></h2>
+    </div>
+    <div class="col-sm">
+    <h2>Recovery Cases</h2>
+    <h2><%= @stats['data']['recovery_cases'] %></h2>
+    </div>
+    <div class="col-sm">
+    <h2>Death Cases</h2>
+    <h2><%= @stats['data']['death_cases'] %></h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+    <h2>Currently Infected</h2>
+    <h2><%= @stats['data']['currently_infected'] %></h2>
+    </div>
+    <div class="col-sm">
+    <h2>Last Updated</h2>
+    <h2><%= @stats['data']['last_update'] %></h2>
+    </div>
+    <div class="col-sm">
+    </div>
+    
+  </div>
+</div>
+</div>
+
+
+
+

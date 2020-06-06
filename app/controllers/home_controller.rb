@@ -1,7 +1,11 @@
 class HomeController < ApplicationController
+    require 'net/http'
     skip_before_action :verify_authenticity_token
     def index
-        @data = CoronaDatum.pluck(:country, :confirmed_cases)
+        @data = CoronaDatum.pluck(:country, :confirmed_cases)   
+        uri = URI('https://corona-virus-stats.herokuapp.com/api/v1/cases/general-stats')
+        response = Net::HTTP.get(uri)  
+        @stats = JSON.parse(response)
     end
   
     def receive_data
