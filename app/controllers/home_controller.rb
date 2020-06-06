@@ -1,10 +1,10 @@
 class HomeController < ApplicationController
 
     def index
-        @data = CoronaDatum.pluck(:country, :confirmed_cases)
+        file = File.read('corona_data.json')
+        file = JSON.parse(file)
+        file['Countries'].each do |hash| CoronaDatum.create( country: hash['Country', confirmed_cases: hash['TotalConfirmed']) end
     end
   
-    file = File.read('corona_data.json')
-    file = JSON.parse(file)
-    file['Countries'].each do |hash| CoronaDatum.create( country: hash['Country', confirmed_cases: hash['TotalConfirmed']) end
+   
 end
