@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple coronavirus map. Integrated using CORONAVIRUS COVID19 API and Webhooks to listen new changes in the data.
 
-Things you may want to cover:
+Links:
 
-* Ruby version
+* COVID API : https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest#00030720-fae3-4c72-8aea-ad01ba17adf8
 
-* System dependencies
+* Charts Gem:https://chartkick.com/
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Deploy : Heroku https://coronaviruscovid19-map.herokuapp.com/
